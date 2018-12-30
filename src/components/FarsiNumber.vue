@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { Vue, Component } from "vue-property-decorator";
 
 @Component
 export default class FarsiNumber extends Vue {
@@ -48,11 +48,9 @@ export default class FarsiNumber extends Vue {
       return "صفر"; // "sefr";
     }
     const knum = Math.floor(n / 1000);
-    return (
-      (knum > 0 ? this.farsiString(knum, prevK + 1) + " " : "") +
-      this.handredString(n - knum * 1000) +
-      this.postfixString(prevK)
-    );
+    const kstr = this.handredString(n - knum * 1000) + this.mstr(prevK);
+    const prevstr = knum > 0 ? this.farsiString(knum, prevK + 1) : "";
+    return prevstr + (prevstr && kstr ? " و " : "") + kstr;
   }
 
   private handredString(n: number): string {
@@ -75,7 +73,7 @@ export default class FarsiNumber extends Vue {
     }
   }
 
-  private postfixString(k: number) {
+  private mstr(k: number) {
     switch (k) {
       case 0:
         return "";
@@ -92,23 +90,23 @@ export default class FarsiNumber extends Vue {
       case 0:
         return "";
       case 1:
-        return "صد "; // "sad ";
+        return "صد"; // "sad ";
       case 2:
-        return "دویست "; // "deviist ";
+        return "دویست"; // "deviist ";
       case 3:
-        return "سیصد "; // "siisad ";
+        return "سیصد"; // "siisad ";
       case 4:
-        return "چهارصد "; // "chahaarsad ";
+        return "چهارصد"; // "chahaarsad ";
       case 5:
-        return "پانصد "; // "paansad ";
+        return "پانصد"; // "paansad ";
       case 6:
-        return "ششصد "; // "sheshsad ";
+        return "ششصد"; // "sheshsad ";
       case 7:
-        return "هفتصد "; // "haftdsad ";
+        return "هفتصد"; // "haftdsad ";
       case 8:
-        return "هشتصد "; // "hashtsad ";
+        return "هشتصد"; // "hashtsad ";
       case 9:
-        return "نهصد "; // "nohsad ";
+        return "نهصد"; // "nohsad ";
     }
     return "";
   }
@@ -120,21 +118,21 @@ export default class FarsiNumber extends Vue {
       case 1:
         return "";
       case 2:
-        return "بیست "; // "biist";
+        return "بیست"; // "biist";
       case 3:
-        return "سی "; // "sii";
+        return "سی"; // "sii";
       case 4:
-        return "چهل "; // "chehel";
+        return "چهل"; // "chehel";
       case 5:
-        return "پنجاه "; // "panjah";
+        return "پنجاه"; // "panjah";
       case 6:
-        return "شصت "; // "shast";
+        return "شصت"; // "shast";
       case 7:
-        return "هفتاد "; // "haftaad";
+        return "هفتاد"; // "haftaad";
       case 8:
-        return "هشتاد "; // "hashtaad";
+        return "هشتاد"; // "hashtaad";
       case 9:
-        return "نود "; // "navad";
+        return "نود"; // "navad";
     }
     return "";
   }
