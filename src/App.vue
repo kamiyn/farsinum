@@ -2,21 +2,13 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span>Farsi</span>
+        <span class="font-weight-light">numbers</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <!-- <v-toolbar-items>
-        <router-link to="/">Home</router-link>|
-        <router-link to="/about">About</router-link>
-      </v-toolbar-items>-->
-      <v-btn to="/">Home</v-btn>
-      <v-btn to="/about">About</v-btn>
-      <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+      <v-btn flat to="/">Home</v-btn>
+      <v-btn flat to="/about">About</v-btn>
     </v-toolbar>
-
     <v-content>
       <router-view/>
     </v-content>
@@ -25,6 +17,6 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-@Component({})
+@Component({}) // Component としての作成は必須
 export default class App extends Vue {}
 </script>
