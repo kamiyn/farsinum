@@ -2,6 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+
+// プラグインの導入やPWA初期化
+import './plugins/vuetify';
 import './registerServiceWorker';
 
 Vue.config.productionTip = false;
