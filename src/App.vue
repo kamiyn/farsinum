@@ -18,8 +18,8 @@
       </div>
 
       <v-spacer></v-spacer>
-      <v-btn flat to="/">Home</v-btn>
-      <v-btn flat to="/about">About</v-btn>
+      <v-btn to="/">Home</v-btn>
+      <v-btn to="/about">About</v-btn>
     </v-app-bar>
 
     <v-content>

@@ -2,8 +2,8 @@
   <v-container>
     <v-layout text-center wrap>
       <v-flex xs12>
-        <v-btn flat @click="clickShowAnswer">show Answer</v-btn>
-        <v-btn flat @click="NewQuestion">new Question</v-btn>
+        <v-btn @click="clickShowAnswer">show Answer</v-btn>
+        <v-btn @click="NewQuestion">new Question</v-btn>
       </v-flex>
       <v-flex xs12 display-3>{{ randnum }}</v-flex>
       <v-flex xs12 display-2 v-show="showFarsi">{{ randnumFarsi }}</v-flex>
