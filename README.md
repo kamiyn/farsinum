@@ -1,45 +1,28 @@
-# farsinum
+# farsinum2
 
 ## Project setup
 ```
-yarn init
-```
-
-```
-npm install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
-```
-
-```
-npm run serve
+yarn run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
-```
-
-```
-npm run build
+yarn run build
 ```
 
 ### Run your tests
 ```
-npm run test
+yarn run test
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
+yarn run lint
 ```
 
 ### Customize configuration
