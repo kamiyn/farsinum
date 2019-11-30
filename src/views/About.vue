@@ -19,6 +19,6 @@ export default {
   name: "about",
   components: {
     HelloWorld,
-  }
+  },
 };
 </script>

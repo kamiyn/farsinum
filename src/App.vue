@@ -11,14 +11,10 @@
           width="40"
         />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <v-toolbar-title class="headline text-uppercase">
+          <span>Farsi</span>
+          <span class="font-weight-light">numbers</span>
+        </v-toolbar-title>
       </div>
 
       <v-spacer></v-spacer>
