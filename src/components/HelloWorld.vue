@@ -85,13 +85,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-export default Vue.extend({
-  name: "HelloWorld",
-
-  data: () => ({
-    ecosystem: [
+@Component({
+})
+export default class HelloWorld extends Vue {
+    private ecosystem = [
       {
         text: "vuetify-loader",
         href: "https://github.com/vuetifyjs/vuetify-loader",
@@ -104,8 +103,8 @@ export default Vue.extend({
         text: "awesome-vuetify",
         href: "https://github.com/vuetifyjs/awesome-vuetify",
       },
-    ],
-    importantLinks: [
+    ];
+    private importantLinks = [
       {
         text: "Documentation",
         href: "https://vuetifyjs.com",
@@ -126,8 +125,8 @@ export default Vue.extend({
         text: "Articles",
         href: "https://medium.com/vuetify",
       },
-    ],
-    whatsNext: [
+    ];
+    private whatsNext = [
       {
         text: "Explore components",
         href: "https://vuetifyjs.com/components/api-explorer",
@@ -140,7 +139,6 @@ export default Vue.extend({
         text: "Frequently Asked Questions",
         href: "https://vuetifyjs.com/getting-started/frequently-asked-questions",
       },
-    ],
-  }),
-});
+    ];
+  }
 </script>

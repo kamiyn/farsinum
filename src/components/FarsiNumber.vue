@@ -12,9 +12,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-@Component
+@Component({
+})
 export default class FarsiNumber extends Vue {
   private randnum: number;
   private showFarsi: boolean;
