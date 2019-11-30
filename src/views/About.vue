@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <v-container>
-      <v-layout text-xs-center wrap>
+      <v-layout text-center wrap>
         <v-flex xs12>
           <p class="font-weight-bold mb-3 display-3">فارسی</p>
         </v-flex>

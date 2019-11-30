@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout text-xs-center wrap>
+    <v-layout text-center wrap>
       <v-flex xs12>
         <v-btn flat @click="clickShowAnswer">show Answer</v-btn>
         <v-btn flat @click="NewQuestion">new Question</v-btn>
@@ -23,7 +23,7 @@ export default class FarsiNumber extends Vue {
   constructor() {
     super();
     this.randnum = 0;
-    this.showFarsi = false;
+    this.showFarsi = false ;
     this.randnumFarsi = "ANSWER!";
   }
 
@@ -37,7 +37,7 @@ export default class FarsiNumber extends Vue {
   }
 
   private NewQuestion(): boolean {
-    this.showFarsi = false;
+    this.showFarsi = false ;
     this.randnum = Math.floor(Math.pow(10, Math.random() * 8));
     this.randnumFarsi = this.farsiString(this.randnum, 0);
     return true;
